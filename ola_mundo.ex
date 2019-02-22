@@ -3,6 +3,9 @@ defmodule OlaMundo do
 import IO, only: [puts: 1]
 import Kernel, except: [inspect: 1]
 
+
+#alias apelido do modulo
+  alias OlaMundo.Util.Calculo, as: MeuCalculo
   def ola do
        inspect("chamando dentro de ola")
   end
@@ -13,5 +16,9 @@ import Kernel, except: [inspect: 1]
       puts "saindo da função"
   end
 
+  def calcular(valor1, valor2) do
 
+#    OlaMundo.Util.Calculo.somar(valor1,valor2)
+    MeuCalculo.somar(valor1,valor2)
+  end
 end
