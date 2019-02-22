@@ -4,8 +4,12 @@ import IO, only: [puts: 1]
 import Kernel, except: [inspect: 1]
 
 
-#alias apelido do modulo
+  #alias apelido do modulo
   alias OlaMundo.Util.Calculo, as: MeuCalculo
+
+  #macros dentro de integer
+   require Integer
+
   def ola do
        inspect("chamando dentro de ola")
   end
@@ -20,5 +24,10 @@ import Kernel, except: [inspect: 1]
 
 #    OlaMundo.Util.Calculo.somar(valor1,valor2)
     MeuCalculo.somar(valor1,valor2)
+  end
+
+
+  def verifica_se_numero_par(numero) do
+    puts "#{numero} é par ?: #{Integer.is_even(numero)} "
   end
 end
